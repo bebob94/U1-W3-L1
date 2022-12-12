@@ -1,3 +1,6 @@
+function header(exercise) {
+    console.log("-----------------------", exercise, "-----------------------");
+}
 // Esercizi aggiuntivi (facoltativi) per D4
 
 /* EXTRA 1
@@ -5,7 +8,30 @@
  se il suo valore è maggiore di 5 o no.
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
+header("esercizio1")
 
+function checkArray(array) {
+    tot = 0 
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]>5) {
+            tot += array[i];
+            console.log(array[i], "è maggiore di 5");
+        }else{
+            console.log(array[i], "non è maggiore di 5");
+        }
+    }
+    return tot
+}
+
+const a= []
+for (let i = 0; i < 5; i++) {
+    const element= (Math.floor(Math.random() * 11))
+    a.push(element)
+}
+console.log(a);
+
+checkArray(a)
+console.log(" il totale dei numeri maggiori di 5 è ",tot);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 2
