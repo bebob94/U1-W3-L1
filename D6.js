@@ -16,12 +16,13 @@ REGOLE
 header("esercizio 1")
 
 function area(l1,l2) {
-    areaRettangolo= l1*l2
+    let areaRettangolo= l1*l2
     return areaRettangolo
 }
 
-area(2,5)
-console.log("l'area del rettangolo è", areaRettangolo);
+areaResult=area(2,5)
+
+console.log("l'area del rettangolo è", areaResult);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
@@ -32,7 +33,7 @@ console.log("l'area del rettangolo è", areaRettangolo);
 header("esercizio2")
 
 function crazySum(num1,num2) {
-    
+    let tot= 0
     if (num1===num2) {
         tot= (num1+num2)*3
     }else{
@@ -41,9 +42,9 @@ function crazySum(num1,num2) {
     return tot
 }
 
-crazySum(4,4)
+total2 = crazySum(4,4)
 
-console.log("il totale dei 2 numeri è", tot );
+console.log("il totale dei 2 numeri è", total2 );
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 3
@@ -54,6 +55,7 @@ header("esercizio 3")
 
 
 function crazyDiff(num) {
+    let tot= 0
     if (num>19) {
         tot = (num - 19)*3
     }else{
@@ -62,8 +64,8 @@ function crazyDiff(num) {
     return tot
 }
 
-crazyDiff(20)
-console.log("il totale è",tot);
+total3=crazyDiff(20)
+console.log("il totale è", total3);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 4
@@ -73,6 +75,7 @@ console.log("il totale è",tot);
 header("eservizio4")
 
 function boundary(n) {
+    
     switch (true) {
         case n>20 && n<=100:
         return result="true"
@@ -83,8 +86,8 @@ function boundary(n) {
     }
 }
 
-boundary(40)
-console.log("il numero è compreso tra 20 e 100 o è uguale a 400?", result);
+result4 = boundary(40)
+console.log("il numero è compreso tra 20 e 100 o è uguale a 400?", result4);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
@@ -102,9 +105,9 @@ function epify(string) {
     }
 }
 
-epify("EPICODE")
+result5= epify("EPICODE")
 
-console.log(result);
+console.log(result5);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
@@ -121,8 +124,8 @@ function check3and7(newnum) {
     }
 }
 
-check3and7(20)
-console.log(result);
+result6= check3and7(20)
+console.log(result6);
 
 
 
@@ -134,16 +137,16 @@ console.log(result);
 header("esercizio7")
 
 function reverseString(string) {
-    result= string.split("")
-    reverse = result.reverse()
-    join = result.join("")
+    let result= string.split("")
+    let reverse = result.reverse()
+    let join = result.join("")
     return join
     
 }
 
-reverseString("ciao")
+join7= reverseString("ciao")
 
-console.log(join);
+console.log(join7);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -154,15 +157,28 @@ console.log(join);
 header("esercizio8")
 
 function upperFirst(string) {
-    words = string.slice(" ")
-    console.log(words);
-    capitalize = words.charAt(0).toUpperCase()
-    console.log(capitalize);
-    return capitalize
+    let result="";
+    let words = string.split(" ")
+    
+    for (let i = 0; i < words.length; i++) {
+        const element = words[i].split("");
+        let capitalize= "";
+        for (let ind = 0; ind < words.length; ind++) {
+            if (ind===0) {
+                let maiusc= words[i].toUpperCase()
+                capitalize += maiusc
+            }else{
+                capitalize += words[i]
+            }
+            
+        }
+        result += capitalize + " "
+    }
+    return result
 }
 
-upperFirst("ciao da me che sono io")
-console.log(capitalize);
+capitalize8=upperFirst("ciao da me che sono io")
+console.log(capitalize8);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -173,16 +189,16 @@ console.log(capitalize);
 header("esercizio9")
 
 function cutString(string) {
-    result = string.split("")
+    let result = string.split("")
     result.shift()
     result.pop()
     result = result.join("")
     return result
 }
 
-cutString("ciao")
+result9=cutString("ciao")
 
-console.log(result);
+console.log(result9);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
@@ -191,14 +207,14 @@ console.log(result);
 header("esercizio10")
 
 function giveMeRandom(n) {
-    a = []
+    let a = []
     for (let i = 0; i < n; i++) {
         a.push(Math.floor(Math.random()*11))
     }
     return a
 }
 
-giveMeRandom(5)
+a10=giveMeRandom(5)
 
-console.log(a);
+console.log(a10);
 /* SCRIVI QUI LA TUA RISPOSTA */
