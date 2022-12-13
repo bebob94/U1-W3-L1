@@ -157,24 +157,26 @@ console.log(join7);
 header("esercizio8")
 
 function upperFirst(string) {
+    let capitalize=""
+    let finalresult=[]
     let result="";
     let words = string.split(" ")
     
     for (let i = 0; i < words.length; i++) {
+        let arrayCar=""
         const element = words[i].split("");
-        let capitalize= "";
-        for (let ind = 0; ind < words.length; ind++) {
-            if (ind===0) {
-                let maiusc= words[i].toUpperCase()
-                capitalize += maiusc
-            }else{
-                capitalize += words[i]
-            }
-            
-        }
-        result += capitalize + " "
+        result = element[0].toUpperCase()
+        console.log("result è ", result);
+        element.shift()
+        arrayCar= element.join("")
+        console.log("element è", element);
+        finalresult.push(result + arrayCar)
+        console.log("finalResult è", finalresult);
     }
-    return result
+
+    capitalize= finalresult.join(" ")
+    // console.log("capitalize è", capitalize);
+    return capitalize
 }
 
 capitalize8=upperFirst("ciao da me che sono io")
