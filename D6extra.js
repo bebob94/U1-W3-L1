@@ -234,13 +234,14 @@ const spam = (emailContent) => {
   emailContent.split(" ");
   if (emailContent.includes("spam") || emailContent.includes("scam")) {
     console.log("la mail contiene spam e scam");
-    return emailContent;
+    return true;
   } else {
     console.log("la mail non contiene spam o scam");
+    return false;
   }
 };
 
-spam("ho inviato una mail con spar");
+console.log(spam("ho inviato una mail con normale"));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
