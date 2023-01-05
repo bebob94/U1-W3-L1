@@ -250,6 +250,14 @@ console.log(spam("ho inviato una mail con SPAM"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 header("esercizio10");
 
+const timePassed = (date) => {
+  let newDate = new Date();
+  console.log(newDate);
+  let result = newDate - date;
+  return Math.floor(result / (1000 * 60 * 60 * 24));
+};
+
+console.log(timePassed(new Date(2023, 0, 3)));
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come paremetri due numeri interi, "x" e "y".
  Il risultato deve essere una matrice di "x" volte "y", e i valori devono rispecchiare gli indici della posizione all'interno della matrice.
