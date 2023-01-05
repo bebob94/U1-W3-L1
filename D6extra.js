@@ -210,14 +210,14 @@ header("esercizio8");
 const arrayOfStrings = ["Carlo", "Marina", "Alberto", "Elia"];
 
 const longest = (array) => {
-  max = [];
+  max = "";
   for (let i = 0; i < array.length; i++) {
-    const element = array[i].split("");
+    const element = array[i];
     if (element.length > max.length) {
       max = element;
     }
   }
-  return max.join("");
+  return max;
 };
 
 console.log("la stringa più lunga è ", longest(arrayOfStrings));
@@ -230,9 +230,9 @@ console.log("la stringa più lunga è ", longest(arrayOfStrings));
 header("esercizio9");
 
 const spam = (emailContent) => {
-  emailContent.toUpperCase();
-  emailContent.split(" ");
-  if (emailContent.includes("spam") || emailContent.includes("scam")) {
+  let element = emailContent.toLowerCase();
+  element.split(" ");
+  if (element.includes("spam") || element.includes("scam")) {
     console.log("la mail contiene spam e scam");
     return true;
   } else {
@@ -241,7 +241,7 @@ const spam = (emailContent) => {
   }
 };
 
-console.log(spam("ho inviato una mail con normale"));
+console.log(spam("ho inviato una mail con SPAM"));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
