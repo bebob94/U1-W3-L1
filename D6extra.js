@@ -250,10 +250,10 @@ console.log(spam("ho inviato una mail con SPAM"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 header("esercizio10");
 
-const timePassed = (date) => {
+const timePassed = (data) => {
   let newDate = new Date();
   console.log(newDate);
-  let result = newDate - date;
+  let result = newDate - data;
   return Math.floor(result / (1000 * 60 * 60 * 24));
 };
 
